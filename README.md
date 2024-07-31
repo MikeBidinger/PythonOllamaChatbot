@@ -1,8 +1,18 @@
-# Python AI Chatbot using Ollama
+# Python AI Chatbot GUI using Ollama
 
 This Python AI Chatbot will run locally, so you don't need to pay for a
 subscription or connect to a API (like OpenAI), by using
 [Ollama](https://ollama.com/).
+
+Used resources:
+
+| Resource                                                                                                                                                                        | Functionality                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| [Tech With Tim](https://www.youtube.com/@TechWithTim) - [Create a LOCAL Python AI Chatbot In Minutes Using Ollama](https://www.youtube.com/watch?v=d0o89z134CQ)                 | LLM (Python)                     |
+| [CodingNepal](https://www.codingnepalweb.com/) - [How to Create Working Chatbot in HTML CSS and JavaScript](https://www.codingnepalweb.com/create-chatbot-html-css-javascript/) | Web GUI (HTML, CSS & JavaScript) |
+| [Tech With Tim](https://www.youtube.com/@TechWithTim) - [Python Website Full Tutorial](https://www.youtube.com/watch?v=dam0GPOAvVI)                                             |
+
+https://www.youtube.com/watch?v=70H_7C0kMbI
 
 ## Installation
 
@@ -56,13 +66,14 @@ created, we can activate it using the command `activate [ENV_NAME]`.
 
 Now we can install the packages we need to run this example script:
 
-| Package          | Anaconda Command                                                                                                     |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Ollama           | `pip install ollama` or `conda install conda-forge::ollama`                                                          |
-| LangChain        | `pip install langchain` or `conda install conda-forge::langchain`                                                    |
-| LangChain-Ollama | `pip install langchain-ollama` (no anaconda channel providing the package langchain-ollama at the moment of writing) |
+| Package                                 | Anaconda Command                                                                                                     |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [Ollama](https://ollama.com/)           | `pip install ollama` or `conda install ollama -c conda-forge`                                                        |
+| [LangChain](https://www.langchain.com/) | `pip install langchain` or `conda install langchain -c conda-forge`                                                  |
+| LangChain-Ollama                        | `pip install langchain-ollama` (no anaconda channel providing the package langchain-ollama at the moment of writing) |
+| [Flask](https://flask.palletsprojects.com/)                                   | `pip install flask` or `conda install flask`                                                                         |
 
-### Run the Python AI Chatbot
+### Run the Python AI Chatbot GUI
 
-Now the setup is completed, we are able to run the script in the created
+Now the setup is completed, we are able to run the script within the created
 virtual environment.
