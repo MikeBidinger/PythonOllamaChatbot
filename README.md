@@ -10,9 +10,14 @@ Used resources:
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | [Tech With Tim](https://www.youtube.com/@TechWithTim) - [Create a LOCAL Python AI Chatbot In Minutes Using Ollama](https://www.youtube.com/watch?v=d0o89z134CQ)                 | LLM (Python)                     |
 | [CodingNepal](https://www.codingnepalweb.com/) - [How to Create Working Chatbot in HTML CSS and JavaScript](https://www.codingnepalweb.com/create-chatbot-html-css-javascript/) | Web GUI (HTML, CSS & JavaScript) |
-| [Tech With Tim](https://www.youtube.com/@TechWithTim) - [Python Website Full Tutorial](https://www.youtube.com/watch?v=dam0GPOAvVI)                                             |
+| [Tech With Tim](https://www.youtube.com/@TechWithTim) - [Python Website Full Tutorial](https://www.youtube.com/watch?v=dam0GPOAvVI)                                             | Flask                            |
 
-https://www.youtube.com/watch?v=70H_7C0kMbI
+https://www.youtube.com/watch?v=70H_7C0kMbI&t=400s
+
+## To-Do:
+
+-   Inject given context to the LLM
+-   Create GUI App with Flask (HTML, CCS & JavaScript)
 
 ## Installation
 
@@ -66,12 +71,12 @@ created, we can activate it using the command `activate [ENV_NAME]`.
 
 Now we can install the packages we need to run this example script:
 
-| Package                                 | Anaconda Command                                                                                                     |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [Ollama](https://ollama.com/)           | `pip install ollama` or `conda install ollama -c conda-forge`                                                        |
-| [LangChain](https://www.langchain.com/) | `pip install langchain` or `conda install langchain -c conda-forge`                                                  |
-| LangChain-Ollama                        | `pip install langchain-ollama` (no anaconda channel providing the package langchain-ollama at the moment of writing) |
-| [Flask](https://flask.palletsprojects.com/)                                   | `pip install flask` or `conda install flask`                                                                         |
+| Package                                     | Anaconda Command                                                                                                     |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [Ollama](https://ollama.com/)               | `pip install ollama` or `conda install ollama -c conda-forge`                                                        |
+| [LangChain](https://www.langchain.com/)     | `pip install langchain` or `conda install langchain -c conda-forge`                                                  |
+| LangChain-Ollama                            | `pip install langchain-ollama` (no anaconda channel providing the package langchain-ollama at the moment of writing) |
+| [Flask](https://flask.palletsprojects.com/) | `pip install flask` or `conda install flask`                                                                         |
 
 ### Run the Python AI Chatbot GUI
 
