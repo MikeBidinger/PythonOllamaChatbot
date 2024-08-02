@@ -24,10 +24,6 @@ Used resources (and many thanks to the creators of these resources :+1:):
 | [CodingNepal](https://www.codingnepalweb.com/) - [How to Create Working Chatbot in HTML CSS and JavaScript](https://www.codingnepalweb.com/create-chatbot-html-css-javascript/) | Web GUI (HTML, CSS & JavaScript) |
 | [Tech With Tim](https://www.youtube.com/@TechWithTim) - [Python Website Full Tutorial](https://www.youtube.com/watch?v=dam0GPOAvVI)                                             | Flask                            |
 
-## To Do:
-
--   favicon.ico
-
 # Installation
 
 Start by downloading Ollama from there download page
