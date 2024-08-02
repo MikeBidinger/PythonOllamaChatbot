@@ -1,20 +1,12 @@
 from flask import Flask, request, render_template, jsonify
-from pprint import pprint as pp
+from chatbot import get_response
+from utils import HISTORY, ERROR_MSG
+
+# Start the conversation with the provided history
+conversation = HISTORY
 
 # Create Flask app
 app = Flask(__name__)
-
-conversation = [
-    {"role": "ai", "msg": "Hi there!<br>How can I help you today?"},
-    {"role": "human", "msg": "How are you?"},
-    {"role": "ai", "msg": "I'm doing fine.<br>Thanks for asking!"},
-    {"role": "human", "msg": "What is your name?"},
-    {
-        "error": True,
-        "role": "ai",
-        "msg": "Oops!<br>Something went wrong.<br>Please try again.",
-    },
-]
 
 
 # Define route for home page
@@ -23,19 +15,25 @@ def main():
     return render_template("index.html", data=conversation)
 
 
-# Define route for test page
+# Define route for data processing
 @app.route("/process-data", methods=["POST"])
 def process_data():
+    # Get the data from the request
     data = request
     text = request.get_data(as_text=True)
-    print(text)
     user_msg = data.json["msg"]
-    conversation.append(data)
-    # Get the LLM response for the given input and context 
-    response = "Bot answer."
-    conversation.append({"role": "ai", "msg": response})
-    return jsonify({"msg": response})
+    # Get the LLM response for the given input message and conversation context
+    response = get_response(conversation, user_msg)
+    # Append the user and chatbot prompt to the conversation context
+    conversation.append(text)
+    if response == ERROR_MSG:
+        result = {"error": True, "role": "ai", "msg": response}
+    else:
+        result = {"role": "ai", "msg": response}
+    conversation.append(result)
+    return jsonify(result)
 
 
 if __name__ == "__main__":
+    # Run Flask app
     app.run(debug=True)

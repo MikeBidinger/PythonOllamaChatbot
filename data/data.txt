@@ -1,0 +1,12 @@
+Peter has a job as a software developer.
+His salary is 5000 euro a month.
+Additionally he does some freelancing on the side.
+His incoming from this is 1000 euro a month.
+His expenses are as following:
+- House 1000 euro a month
+- Groceries 800 euro a month
+- Hobbies 200 euro a month
+- Car 100 euro a month
+- Bike 50 euro a month
+He also saves some money for his daughter Julia.
+This is 150 euro a month.

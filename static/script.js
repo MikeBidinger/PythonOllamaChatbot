@@ -38,6 +38,9 @@ const generateResponse = async (chatElement) => {
         .then((result) => {
             // Get the API response text and update the message element
             messageElement.textContent = result.msg;
+            if (result.error === true) {
+                messageElement.classList.add("error");
+            }
         })
         .catch((error) => {
             // Handle error
@@ -48,28 +51,6 @@ const generateResponse = async (chatElement) => {
         .finally(() => {
             chatbox.scrollTo(0, chatbox.scrollHeight);
         });
-
-    // // Send POST request to API, get response and set the response as paragraph text
-    // try {
-    //     const response = await fetch(API_URL, requestOptions);
-    //     console.log(response);
-    //     const data = await response.json();
-    //     console.log(data);
-    //     if (!response.ok) throw new Error(data.error.message);
-
-    //     // Get the API response text and update the message element
-    //     messageElement.textContent =
-    //         data.candidates[0].content.parts[0].text.replace(
-    //             /\*\*(.*?)\*\*/g,
-    //             "$1"
-    //         );
-    // } catch (error) {
-    //     // Handle error
-    //     messageElement.classList.add("error");
-    //     messageElement.textContent = error.message;
-    // } finally {
-    //     chatbox.scrollTo(0, chatbox.scrollHeight);
-    // }
 };
 
 const handleChat = () => {
@@ -115,3 +96,5 @@ closeBtn.addEventListener("click", () =>
 chatbotToggler.addEventListener("click", () =>
     document.body.classList.toggle("show-chatbot")
 );
+
+chatbox.scrollTo(0, chatbox.scrollHeight);
